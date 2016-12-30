@@ -1,0 +1,250 @@
+\hypertarget{structf2k__timer_1_1timer}{}\section{f2k\+\_\+timer\+:\+:timer Type Reference}
+\label{structf2k__timer_1_1timer}\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+
+
+This is the main timer class. The timer works in seconds.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_ab7982b51d7b764a438aaf9975d2b3bba}{start} =$>$ \hyperlink{namespacef2k__timer_a70057597d71664f70b9164c7d741c839}{timer\+\_\+start}
+\begin{DoxyCompactList}\small\item\em subroutine that starts the timer. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a113cdc3d059425bf1cef03381621633f}{stop} =$>$ \hyperlink{namespacef2k__timer_a9dcd2c81036ce32527bd3460606694b4}{timer\+\_\+stop}
+\begin{DoxyCompactList}\small\item\em subroutine that stops the timer. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a590c707c84550f49b2fd2b719bdf0be7}{loop} =$>$ \hyperlink{namespacef2k__timer_a605274108f4afabff1821ec1a1243575}{timer\+\_\+loop}
+\begin{DoxyCompactList}\small\item\em subroutine that records intermediate times (loops). \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a21d4dc2135007d4b3d3ad03a189e4391}{average} =$>$ \hyperlink{namespacef2k__timer_a02dfc06ae09be917c91560357d92ab3f}{timer\+\_\+average}
+\begin{DoxyCompactList}\small\item\em function that gives the average loop time. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a5206f3c8107845d257307badf61794dc}{variance} =$>$ \hyperlink{namespacef2k__timer_a2794f7fb1f1084d23939c19d812642ad}{timer\+\_\+variance}
+\begin{DoxyCompactList}\small\item\em function that gives the variance of the loop time. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_aa5aee6ebc58df5de0530d116b321f7fc}{elapsed\+\_\+time} =$>$ \hyperlink{namespacef2k__timer_a2be6741422c75d3280019867de272e19}{timer\+\_\+elapsed}
+\begin{DoxyCompactList}\small\item\em function that returns the elapsed time, defined as (end\+\_\+time-\/start\+\_\+time) \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_aaab4196857f9ff36c71ff204b193d399}{reset} =$>$ \hyperlink{namespacef2k__timer_adfb594d0fe1e7b82a416e8b240653c9e}{timer\+\_\+reset}
+\begin{DoxyCompactList}\small\item\em subroutine that resets the timer. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a03aef1644b9f830aacdd23a01f36e19e}{wait} =$>$ \hyperlink{namespacef2k__timer_a247439a0545b74e9205436b1e39e122e}{timer\+\_\+wait}
+\begin{DoxyCompactList}\small\item\em subroutine that waits a number of seconds. \end{DoxyCompactList}\item 
+procedure, public \hyperlink{structf2k__timer_1_1timer_a81c3b114f970b623d8f66f8c1e8ba98b}{time} =$>$ \hyperlink{namespacef2k__timer_ac3d2422b80e4fc9939d7bd816dc57c23}{timer\+\_\+time}
+\begin{DoxyCompactList}\small\item\em function that takes the time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+real(kind=8), public \hyperlink{structf2k__timer_1_1timer_ab0fc31e03517687fcb0bfdd357f332ab}{start\+\_\+time}
+\begin{DoxyCompactList}\small\item\em timer begin time \end{DoxyCompactList}\item 
+real(kind=8), public \hyperlink{structf2k__timer_1_1timer_af5fd0bdd12fb2d3a6ceb05bc360382de}{end\+\_\+time}
+\begin{DoxyCompactList}\small\item\em timer end time \end{DoxyCompactList}\item 
+integer(kind=4), public \hyperlink{structf2k__timer_1_1timer_af06ab0260ee7e89251d9746c11bcec3e}{number\+\_\+loops}
+\begin{DoxyCompactList}\small\item\em number of timer loops \end{DoxyCompactList}\item 
+real(kind=8), dimension(\+:), allocatable, public \hyperlink{structf2k__timer_1_1timer_aa1d7d7a95322ad486358962f98311777}{loop\+\_\+times}
+\begin{DoxyCompactList}\small\item\em array containing the time intervals of all the loops \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main timer class. The timer works in seconds. 
+
+\begin{DoxyAuthor}{Author}
+Marco Raveri 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Dec 2016 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License v3 
+\end{DoxyCopyright}
+
+
+Definition at line 41 of file timer.\+f90.
+
+
+
+\subsection{Member Function/\+Subroutine Documentation}
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!average@{average}}
+\index{average@{average}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{average=$>$ timer\+\_\+average}{average=> timer_average}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::average (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a21d4dc2135007d4b3d3ad03a189e4391}{}\label{structf2k__timer_1_1timer_a21d4dc2135007d4b3d3ad03a189e4391}
+
+
+function that gives the average loop time. 
+
+
+
+Definition at line 58 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!elapsed\+\_\+time@{elapsed\+\_\+time}}
+\index{elapsed\+\_\+time@{elapsed\+\_\+time}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{elapsed\+\_\+time=$>$ timer\+\_\+elapsed}{elapsed_time=> timer_elapsed}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::elapsed\+\_\+time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_aa5aee6ebc58df5de0530d116b321f7fc}{}\label{structf2k__timer_1_1timer_aa5aee6ebc58df5de0530d116b321f7fc}
+
+
+function that returns the elapsed time, defined as (end\+\_\+time-\/start\+\_\+time) 
+
+
+
+Definition at line 60 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!loop@{loop}}
+\index{loop@{loop}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{loop=$>$ timer\+\_\+loop}{loop=> timer_loop}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a590c707c84550f49b2fd2b719bdf0be7}{}\label{structf2k__timer_1_1timer_a590c707c84550f49b2fd2b719bdf0be7}
+
+
+subroutine that records intermediate times (loops). 
+
+
+
+Definition at line 57 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!reset@{reset}}
+\index{reset@{reset}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{reset=$>$ timer\+\_\+reset}{reset=> timer_reset}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_aaab4196857f9ff36c71ff204b193d399}{}\label{structf2k__timer_1_1timer_aaab4196857f9ff36c71ff204b193d399}
+
+
+subroutine that resets the timer. 
+
+
+
+Definition at line 61 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!start@{start}}
+\index{start@{start}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{start=$>$ timer\+\_\+start}{start=> timer_start}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_ab7982b51d7b764a438aaf9975d2b3bba}{}\label{structf2k__timer_1_1timer_ab7982b51d7b764a438aaf9975d2b3bba}
+
+
+subroutine that starts the timer. 
+
+
+
+Definition at line 55 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!stop@{stop}}
+\index{stop@{stop}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{stop=$>$ timer\+\_\+stop}{stop=> timer_stop}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a113cdc3d059425bf1cef03381621633f}{}\label{structf2k__timer_1_1timer_a113cdc3d059425bf1cef03381621633f}
+
+
+subroutine that stops the timer. 
+
+
+
+Definition at line 56 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!time@{time}}
+\index{time@{time}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{time=$>$ timer\+\_\+time}{time=> timer_time}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a81c3b114f970b623d8f66f8c1e8ba98b}{}\label{structf2k__timer_1_1timer_a81c3b114f970b623d8f66f8c1e8ba98b}
+
+
+function that takes the time. 
+
+
+
+Definition at line 63 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!variance@{variance}}
+\index{variance@{variance}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{variance=$>$ timer\+\_\+variance}{variance=> timer_variance}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::variance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a5206f3c8107845d257307badf61794dc}{}\label{structf2k__timer_1_1timer_a5206f3c8107845d257307badf61794dc}
+
+
+function that gives the variance of the loop time. 
+
+
+
+Definition at line 59 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!wait@{wait}}
+\index{wait@{wait}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{wait=$>$ timer\+\_\+wait}{wait=> timer_wait}}]{\setlength{\rightskip}{0pt plus 5cm}procedure, public f2k\+\_\+timer\+::timer\+::wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structf2k__timer_1_1timer_a03aef1644b9f830aacdd23a01f36e19e}{}\label{structf2k__timer_1_1timer_a03aef1644b9f830aacdd23a01f36e19e}
+
+
+subroutine that waits a number of seconds. 
+
+
+
+Definition at line 62 of file timer.\+f90.
+
+
+
+\subsection{Member Data Documentation}
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!end\+\_\+time@{end\+\_\+time}}
+\index{end\+\_\+time@{end\+\_\+time}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{end\+\_\+time}{end_time}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ), public f2k\+\_\+timer\+::timer\+::end\+\_\+time}\hypertarget{structf2k__timer_1_1timer_af5fd0bdd12fb2d3a6ceb05bc360382de}{}\label{structf2k__timer_1_1timer_af5fd0bdd12fb2d3a6ceb05bc360382de}
+
+
+timer end time 
+
+
+
+Definition at line 44 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!loop\+\_\+times@{loop\+\_\+times}}
+\index{loop\+\_\+times@{loop\+\_\+times}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{loop\+\_\+times}{loop_times}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ), dimension(\+:), allocatable, public f2k\+\_\+timer\+::timer\+::loop\+\_\+times}\hypertarget{structf2k__timer_1_1timer_aa1d7d7a95322ad486358962f98311777}{}\label{structf2k__timer_1_1timer_aa1d7d7a95322ad486358962f98311777}
+
+
+array containing the time intervals of all the loops 
+
+
+
+Definition at line 48 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!number\+\_\+loops@{number\+\_\+loops}}
+\index{number\+\_\+loops@{number\+\_\+loops}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{number\+\_\+loops}{number_loops}}]{\setlength{\rightskip}{0pt plus 5cm}integer ( kind=4 ), public f2k\+\_\+timer\+::timer\+::number\+\_\+loops}\hypertarget{structf2k__timer_1_1timer_af06ab0260ee7e89251d9746c11bcec3e}{}\label{structf2k__timer_1_1timer_af06ab0260ee7e89251d9746c11bcec3e}
+
+
+number of timer loops 
+
+
+
+Definition at line 46 of file timer.\+f90.
+
+\index{f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}!start\+\_\+time@{start\+\_\+time}}
+\index{start\+\_\+time@{start\+\_\+time}!f2k\+\_\+timer\+::timer@{f2k\+\_\+timer\+::timer}}
+\subsubsection[{\texorpdfstring{start\+\_\+time}{start_time}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ), public f2k\+\_\+timer\+::timer\+::start\+\_\+time}\hypertarget{structf2k__timer_1_1timer_ab0fc31e03517687fcb0bfdd357f332ab}{}\label{structf2k__timer_1_1timer_ab0fc31e03517687fcb0bfdd357f332ab}
+
+
+timer begin time 
+
+
+
+Definition at line 43 of file timer.\+f90.
+
+
+
+The documentation for this type was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/mraveri/f2k/source\+\_\+additional/\hyperlink{timer_8f90}{timer.\+f90}\end{DoxyCompactItemize}

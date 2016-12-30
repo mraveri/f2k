@@ -1,0 +1,43 @@
+\hypertarget{timer_8f90}{}\section{/home/travis/build/mraveri/f2k/source\+\_\+additional/timer.f90 File Reference}
+\label{timer_8f90}\index{/home/travis/build/mraveri/f2k/source\+\_\+additional/timer.\+f90@{/home/travis/build/mraveri/f2k/source\+\_\+additional/timer.\+f90}}
+
+
+This file contains a quality timer class to benchmark applications.  
+
+
+\subsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \hyperlink{structf2k__timer_1_1timer}{f2k\+\_\+timer\+::timer}
+\begin{DoxyCompactList}\small\item\em This is the main timer class. The timer works in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \hyperlink{namespacef2k__timer}{f2k\+\_\+timer}
+\begin{DoxyCompactList}\small\item\em This module contains a quality timer class to benchmark applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacef2k__timer_a70057597d71664f70b9164c7d741c839}{f2k\+\_\+timer\+::timer\+\_\+start} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that starts the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a9dcd2c81036ce32527bd3460606694b4}{f2k\+\_\+timer\+::timer\+\_\+stop} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that stops the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a605274108f4afabff1821ec1a1243575}{f2k\+\_\+timer\+::timer\+\_\+loop} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that records intermediate times (loops). \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a02dfc06ae09be917c91560357d92ab3f}{f2k\+\_\+timer\+::timer\+\_\+average} (self)
+\begin{DoxyCompactList}\small\item\em Function that gives the average loop time. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a2794f7fb1f1084d23939c19d812642ad}{f2k\+\_\+timer\+::timer\+\_\+variance} (self)
+\begin{DoxyCompactList}\small\item\em Function that gives the variance of the loop time. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a2be6741422c75d3280019867de272e19}{f2k\+\_\+timer\+::timer\+\_\+elapsed} (self)
+\begin{DoxyCompactList}\small\item\em Function that returns the elapsed time, defined as (end\+\_\+time-\/start\+\_\+time) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_adfb594d0fe1e7b82a416e8b240653c9e}{f2k\+\_\+timer\+::timer\+\_\+reset} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that resets the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a247439a0545b74e9205436b1e39e122e}{f2k\+\_\+timer\+::timer\+\_\+wait} (self, time)
+\begin{DoxyCompactList}\small\item\em Subroutine that waits a number of seconds. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_ac3d2422b80e4fc9939d7bd816dc57c23}{f2k\+\_\+timer\+::timer\+\_\+time} (self)
+\begin{DoxyCompactList}\small\item\em Function that takes the time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains a quality timer class to benchmark applications. 
+

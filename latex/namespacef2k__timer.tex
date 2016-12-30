@@ -1,0 +1,239 @@
+\hypertarget{namespacef2k__timer}{}\section{f2k\+\_\+timer Module Reference}
+\label{namespacef2k__timer}\index{f2k\+\_\+timer@{f2k\+\_\+timer}}
+
+
+This module contains a quality timer class to benchmark applications.  
+
+
+\subsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \hyperlink{structf2k__timer_1_1timer}{timer}
+\begin{DoxyCompactList}\small\item\em This is the main timer class. The timer works in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacef2k__timer_a70057597d71664f70b9164c7d741c839}{timer\+\_\+start} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that starts the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a9dcd2c81036ce32527bd3460606694b4}{timer\+\_\+stop} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that stops the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a605274108f4afabff1821ec1a1243575}{timer\+\_\+loop} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that records intermediate times (loops). \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a02dfc06ae09be917c91560357d92ab3f}{timer\+\_\+average} (self)
+\begin{DoxyCompactList}\small\item\em Function that gives the average loop time. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a2794f7fb1f1084d23939c19d812642ad}{timer\+\_\+variance} (self)
+\begin{DoxyCompactList}\small\item\em Function that gives the variance of the loop time. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_a2be6741422c75d3280019867de272e19}{timer\+\_\+elapsed} (self)
+\begin{DoxyCompactList}\small\item\em Function that returns the elapsed time, defined as (end\+\_\+time-\/start\+\_\+time) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_adfb594d0fe1e7b82a416e8b240653c9e}{timer\+\_\+reset} (self)
+\begin{DoxyCompactList}\small\item\em Subroutine that resets the timer. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacef2k__timer_a247439a0545b74e9205436b1e39e122e}{timer\+\_\+wait} (self, time)
+\begin{DoxyCompactList}\small\item\em Subroutine that waits a number of seconds. \end{DoxyCompactList}\item 
+real(kind=8) function \hyperlink{namespacef2k__timer_ac3d2422b80e4fc9939d7bd816dc57c23}{timer\+\_\+time} (self)
+\begin{DoxyCompactList}\small\item\em Function that takes the time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module contains a quality timer class to benchmark applications. 
+
+\begin{DoxyAuthor}{Author}
+Marco Raveri 
+\end{DoxyAuthor}
+
+
+\subsection{Function/\+Subroutine Documentation}
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+average@{timer\+\_\+average}}
+\index{timer\+\_\+average@{timer\+\_\+average}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+average(self)}{timer_average(self)}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ) function f2k\+\_\+timer\+::timer\+\_\+average (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a02dfc06ae09be917c91560357d92ab3f}{}\label{namespacef2k__timer_a02dfc06ae09be917c91560357d92ab3f}
+
+
+Function that gives the average loop time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output loop average time 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+elapsed@{timer\+\_\+elapsed}}
+\index{timer\+\_\+elapsed@{timer\+\_\+elapsed}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+elapsed(self)}{timer_elapsed(self)}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ) function f2k\+\_\+timer\+::timer\+\_\+elapsed (
+\begin{DoxyParamCaption}
+\item[{class({\bf timer})}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a2be6741422c75d3280019867de272e19}{}\label{namespacef2k__timer_a2be6741422c75d3280019867de272e19}
+
+
+Function that returns the elapsed time, defined as (end\+\_\+time-\/start\+\_\+time) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the total elapsed time 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+loop@{timer\+\_\+loop}}
+\index{timer\+\_\+loop@{timer\+\_\+loop}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+loop(self)}{timer_loop(self)}}]{\setlength{\rightskip}{0pt plus 5cm}subroutine f2k\+\_\+timer\+::timer\+\_\+loop (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a605274108f4afabff1821ec1a1243575}{}\label{namespacef2k__timer_a605274108f4afabff1821ec1a1243575}
+
+
+Subroutine that records intermediate times (loops). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+reset@{timer\+\_\+reset}}
+\index{timer\+\_\+reset@{timer\+\_\+reset}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+reset(self)}{timer_reset(self)}}]{\setlength{\rightskip}{0pt plus 5cm}subroutine f2k\+\_\+timer\+::timer\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{class({\bf timer})}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_adfb594d0fe1e7b82a416e8b240653c9e}{}\label{namespacef2k__timer_adfb594d0fe1e7b82a416e8b240653c9e}
+
+
+Subroutine that resets the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 208 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+start@{timer\+\_\+start}}
+\index{timer\+\_\+start@{timer\+\_\+start}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+start(self)}{timer_start(self)}}]{\setlength{\rightskip}{0pt plus 5cm}subroutine f2k\+\_\+timer\+::timer\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a70057597d71664f70b9164c7d741c839}{}\label{namespacef2k__timer_a70057597d71664f70b9164c7d741c839}
+
+
+Subroutine that starts the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+stop@{timer\+\_\+stop}}
+\index{timer\+\_\+stop@{timer\+\_\+stop}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+stop(self)}{timer_stop(self)}}]{\setlength{\rightskip}{0pt plus 5cm}subroutine f2k\+\_\+timer\+::timer\+\_\+stop (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a9dcd2c81036ce32527bd3460606694b4}{}\label{namespacef2k__timer_a9dcd2c81036ce32527bd3460606694b4}
+
+
+Subroutine that stops the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+time@{timer\+\_\+time}}
+\index{timer\+\_\+time@{timer\+\_\+time}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+time(self)}{timer_time(self)}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ) function f2k\+\_\+timer\+::timer\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{class({\bf timer})}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_ac3d2422b80e4fc9939d7bd816dc57c23}{}\label{namespacef2k__timer_ac3d2422b80e4fc9939d7bd816dc57c23}
+
+
+Function that takes the time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the return value 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+variance@{timer\+\_\+variance}}
+\index{timer\+\_\+variance@{timer\+\_\+variance}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+variance(self)}{timer_variance(self)}}]{\setlength{\rightskip}{0pt plus 5cm}real ( kind=8 ) function f2k\+\_\+timer\+::timer\+\_\+variance (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a2794f7fb1f1084d23939c19d812642ad}{}\label{namespacef2k__timer_a2794f7fb1f1084d23939c19d812642ad}
+
+
+Function that gives the variance of the loop time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the base class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output variance of the loop times 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file timer.\+f90.
+
+\index{f2k\+\_\+timer@{f2k\+\_\+timer}!timer\+\_\+wait@{timer\+\_\+wait}}
+\index{timer\+\_\+wait@{timer\+\_\+wait}!f2k\+\_\+timer@{f2k\+\_\+timer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+wait(self, time)}{timer_wait(self, time)}}]{\setlength{\rightskip}{0pt plus 5cm}subroutine f2k\+\_\+timer\+::timer\+\_\+wait (
+\begin{DoxyParamCaption}
+\item[{class( {\bf timer} )}]{self, }
+\item[{real ( kind=8 ), intent(in)}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacef2k__timer_a247439a0545b74e9205436b1e39e122e}{}\label{namespacef2k__timer_a247439a0545b74e9205436b1e39e122e}
+
+
+Subroutine that waits a number of seconds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & the base class\\
+\hline
+\mbox{\tt in}  & {\em time} & the input number of seconds to wait \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 228 of file timer.\+f90.
+
