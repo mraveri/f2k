@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>f2k: /home/travis/build/mraveri/f2k/source_additional/f2k_header.f90 File Reference</title>
+<title>f2k: /home/travis/build/mraveri/f2k/source_additional/f2k_tester.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,36 +91,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#func-members">Functions/Subroutines</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">f2k_header.f90 File Reference</div>  </div>
+<div class="title">f2k_tester.f90 File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This file contains the subroutine that prints the f2k header to screen or other units.  
+<p>This file contains a couple of utilities that are used to run the f2k tests.  
 <a href="#details">More...</a></p>
 
-<p><a href="f2k__header_8f90_source.html">Go to the source code of this file.</a></p>
+<p><a href="f2k__tester_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
-<tr class="memitem:namespacef2k__header"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__header.html">f2k_header</a></td></tr>
-<tr class="memdesc:namespacef2k__header"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module contains the subroutine that prints the f2k header to screen or other units. <br /></td></tr>
+<tr class="memitem:namespacef2k__test"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__test.html">f2k_test</a></td></tr>
+<tr class="memdesc:namespacef2k__test"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module contains a couple of utilities that are used to run the f2k tests. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:abf1600ca47b0028bbc56b54fc35f008d"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__header.html#abf1600ca47b0028bbc56b54fc35f008d">f2k_header::header</a> (message, unit)</td></tr>
-<tr class="memdesc:abf1600ca47b0028bbc56b54fc35f008d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subroutine that prints the f2k header.  <a href="namespacef2k__header.html#abf1600ca47b0028bbc56b54fc35f008d">More...</a><br /></td></tr>
-<tr class="separator:abf1600ca47b0028bbc56b54fc35f008d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5521518a0731a2e94186a0a65a40cdd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__test.html#ac5521518a0731a2e94186a0a65a40cdd">f2k_test::start_test</a> (outroot)</td></tr>
+<tr class="memdesc:ac5521518a0731a2e94186a0a65a40cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subroutine that starts the test environment.  <a href="namespacef2k__test.html#ac5521518a0731a2e94186a0a65a40cdd">More...</a><br /></td></tr>
+<tr class="separator:ac5521518a0731a2e94186a0a65a40cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70db53dd7050270d9188da00d938694"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__test.html#aa70db53dd7050270d9188da00d938694">f2k_test::end_test</a> ()</td></tr>
+<tr class="memdesc:aa70db53dd7050270d9188da00d938694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subroutine that ends the test environment.  <a href="namespacef2k__test.html#aa70db53dd7050270d9188da00d938694">More...</a><br /></td></tr>
+<tr class="separator:aa70db53dd7050270d9188da00d938694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa639d5e7a2194c8e7130cb6c64b2d804"><td class="memItemLeft" align="right" valign="top">character(len=*), parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__header.html#aa639d5e7a2194c8e7130cb6c64b2d804">f2k_header::f2k_version</a> = 'V0.0 Jan17'</td></tr>
-<tr class="separator:aa639d5e7a2194c8e7130cb6c64b2d804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6fb65e33dab3cd759a60cb198cc6b7"><td class="memItemLeft" align="right" valign="top">integer(kind=4), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacef2k__test.html#a5c6fb65e33dab3cd759a60cb198cc6b7">f2k_test::test_unit</a> = 666</td></tr>
+<tr class="separator:a5c6fb65e33dab3cd759a60cb198cc6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains the subroutine that prints the f2k header to screen or other units. </p>
+<div class="textblock"><p>This file contains a couple of utilities that are used to run the f2k tests. </p>
 
-<p>Definition in file <a class="el" href="f2k__header_8f90_source.html">f2k_header.f90</a>.</p>
+<p>Definition in file <a class="el" href="f2k__tester_8f90_source.html">f2k_tester.f90</a>.</p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
